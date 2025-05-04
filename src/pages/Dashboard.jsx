@@ -15,11 +15,10 @@ const Dashboard = () => {
         <div className="bg-purple-500 rounded-full w-30 h-0.5"></div>
       </div>
       {/* --------Action Buttons--------- */}
-      {/* --------➕ Add New Customer Form--------- */}
       <div className="mt-7 overflow-x-auto md:overflow-visible">
         <div className="flex sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-9 min-w-[600px] sm:min-w-0">
           {/* --------add-customer-section--------- */}
-          <div className="min-w-[250px] rounded-3xl bg-gradient-to-tl from-blue-300 to-indigo-600 py-5 px-6 h-40">
+          <div className="min-w-[250px] rounded-3xl bg-gradient-to-tl from-blue-300 to-indigo-600 py-5 px-6 h-40 shadow hover:shadow-lg hover:shadow-gray-400/50">
             <div className="relative flex flex-col items-center space-y-3">
               <p className="text-white text-2xl flex items-center">
                 Add Customer
@@ -34,22 +33,28 @@ const Dashboard = () => {
           </div>
 
           {/* --------Add Loan--------- */}
-          <div className="min-w-[250px] rounded-3xl bg-gradient-to-tl from-orange-300 to-orange-700 py-5 px-6 h-40">
+          <div className="min-w-[250px] rounded-3xl bg-gradient-to-tl from-orange-300 to-orange-700 py-5 px-6 h-40 shadow hover:shadow-lg hover:shadow-gray-400/50">
             <div className="relative flex flex-col items-center space-y-3">
               <p className="text-white text-2xl flex items-center">Add Loan</p>
-              <button className="absolute top-12 left-20 cursor-pointer">
+              <button
+                onClick={() => setShowDrawer(true)}
+                className="absolute top-12 left-20 cursor-pointer"
+              >
                 <assets.add_cricle_icon className="h-[60px] w-[60px] text-white" />
               </button>
             </div>
           </div>
 
           {/* --------Repayment Form--------- */}
-          <div className="min-w-[250px] rounded-3xl bg-gradient-to-tl from-emerald-400 to-teal-700 py-5 px-6 h-40">
+          <div className="min-w-[250px] rounded-3xl bg-gradient-to-tl from-emerald-400 to-teal-700 py-5 px-6 h-40 shadow hover:shadow-lg hover:shadow-gray-400/50">
             <div className="relative flex flex-col items-center space-y-3">
               <p className="text-white text-2xl flex items-center">
                 Repayment Form
               </p>
-              <button className="absolute top-12 left-20 cursor-pointer">
+              <button
+                onClick={() => setShowDrawer(true)}
+                className="absolute top-12 left-20 cursor-pointer"
+              >
                 <assets.add_cricle_icon className="h-[60px] w-[60px] text-white" />
               </button>
             </div>
