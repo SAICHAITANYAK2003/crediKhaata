@@ -3,6 +3,7 @@ import { assets } from "../assets/assets";
 import { deleteCustomer } from "../utils/userServices";
 import toast from "react-hot-toast";
 import AppContext from "../context/AppContext";
+import { IoWarning } from "react-icons/io5";
 
 const CustomerDetails = ({ selectedUser }) => {
   const { setUserDetailsDrawer } = useContext(AppContext);
@@ -24,6 +25,15 @@ const CustomerDetails = ({ selectedUser }) => {
     } else {
       toast.error(result.message);
     }
+  };
+
+  const onHandleAdd = async () => {
+    toast(
+      <span className="flex items-center gap-2 text-yellow-800">
+        <IoWarning className="text-yellow-500 text-xl" />
+        Under Development
+      </span>
+    );
   };
 
   const customerMailName = selectedUser.name;
@@ -86,7 +96,10 @@ const CustomerDetails = ({ selectedUser }) => {
         </div>
 
         <div className="flex flex-row items-center gap-3">
-          <button className="h-12 w-20 bg-blue-600 py-3 px- 4 text-white rounded-md cursor-pointer">
+          <button
+            onClick={onHandleAdd}
+            className="h-12 w-20 bg-blue-600 py-3 px- 4 text-white rounded-md cursor-pointer"
+          >
             Add
           </button>
           <button
