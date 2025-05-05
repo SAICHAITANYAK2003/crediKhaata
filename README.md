@@ -4,10 +4,18 @@ However, the customer **is successfully added** to the MockAPI.
 To see the updated list, try logging out and logging in again to refresh the data.
 
 ---
+<img width="1466" alt="Screenshot 2025-05-05 at 9 03 36 AM" src="https://github.com/user-attachments/assets/bbcff853-0cd0-4f87-84b7-370d61ad480a" />
+
+<img width="1468" alt="Screenshot 2025-05-05 at 9 03 49 AM" src="https://github.com/user-attachments/assets/b771b880-b8b9-4c72-922c-3436155e07d0" />
+
+
+
 
 # 🧾 CrediKhaata – Loan Ledger UI for Shopkeepers
 
 A responsive credit tracking app for small shopkeepers to manage trusted customers, track credit sales, record repayments, and view dues — all from a single dashboard.
+
+
 
 ## 🌐 Tech Stack
 
@@ -48,4 +56,26 @@ A responsive credit tracking app for small shopkeepers to manage trusted custome
 ---
 
 ## 📁 Folder Structure
+src/
+│
+├── components/ # Reusable UI components
+├── pages/ # Login, Dashboard, Customer Details
+├── services/ # API integration with MockAPI
+├── context/ # Global state using React Context
+├── App.js # Main App Routing
+└── index.js # Entry Point
+
+
+ Install Dependencies
+
+npm install
+
+. Start Development Server
+
+npm run dev
+
+
+
+
+
 
