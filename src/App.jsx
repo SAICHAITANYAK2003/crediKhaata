@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import AppContext from "./context/AppContext";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   const { loginUser } = useContext(AppContext);
@@ -22,6 +23,7 @@ const App = () => {
           />
         </Routes>
       </div>
+      {loginUser ? <Footer /> : null}
     </>
   );
 };

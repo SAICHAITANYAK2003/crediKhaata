@@ -15,6 +15,7 @@ const AppContextProvider = ({ children }) => {
   const [signUpUser, setSignUpUser] = useState(form_mode.REGISTER);
   const [users, setUsers] = useState([]);
   const [showDrawer, setShowDrawer] = useState(false);
+  const [userDetailsDrawer, setUserDetailsDrawer] = useState(false);
   const currency = import.meta.env.CURRENCY;
 
   useEffect(() => {
@@ -77,6 +78,8 @@ const AppContextProvider = ({ children }) => {
     currency,
     showDrawer,
     setShowDrawer,
+    userDetailsDrawer,
+    setUserDetailsDrawer,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

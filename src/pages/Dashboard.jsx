@@ -3,10 +3,18 @@ import { assets } from "../assets/assets";
 import AppContext from "../context/AppContext";
 import CustomerCard from "../components/CustomerCard";
 import AddCustomerForm from "../components/AddCustomerForm";
+import CustomerDetails from "../components/CustomerDetails";
 
 const Dashboard = () => {
-  const { users, showDrawer, setShowDrawer } = useContext(AppContext);
+  const {
+    users,
+    showDrawer,
+    setShowDrawer,
+    userDetailsDrawer,
+    setUserDetailsDrawer,
+  } = useContext(AppContext);
   const [searchName, setSearchName] = useState("");
+  const [selectedUser, setSelectedUser] = useState(null);
 
   return (
     <div className="relative mt-12">
@@ -84,7 +92,15 @@ const Dashboard = () => {
             user.name.toLowerCase().includes(searchName.toLowerCase())
           )
           .map((user) => (
-            <CustomerCard key={user.id} user={user} />
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                setUserDetailsDrawer(true);
+                setSelectedUser(user);
+              }}
+            >
+              <CustomerCard key={user.id} user={user} />
+            </div>
           ))}
       </div>
 
@@ -109,6 +125,34 @@ const Dashboard = () => {
 
             <div>
               <AddCustomerForm />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {userDetailsDrawer && (
+        <div
+          onClick={() => setUserDetailsDrawer(false)}
+          className="fixed inset-0 bg-black/30 backdrop-blur-[0.5px] flex items-end justify-center"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="w-full bg-white p-6 rounded-t-4xl shadow-lg "
+          >
+            <div className="flex flex-row justify-between items-center px-6 py-4">
+              <h3 className="text-2xl md:text-3xl font-medium mb-4">
+                Customer Details
+              </h3>
+              <button
+                onClick={() => setUserDetailsDrawer(false)}
+                className="text-red-500 hover:bg-red-500 hover:text-white p-2 rounded-md cursor-pointer"
+              >
+                <assets.close_circle_icon className="font-bold text-2xl" />
+              </button>
+            </div>
+
+            <div>
+              <CustomerDetails selectedUser={selectedUser} />
             </div>
           </div>
         </div>

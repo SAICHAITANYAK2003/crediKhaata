@@ -7,3 +7,5 @@ const apiUrl = axios.create({
 export const getUsers = () => apiUrl.get("/users");
 
 export const addUser = (newUser) => apiUrl.post("/users", newUser);
+
+export const deleteUser = (userId) => apiUrl.delete(`/users/${userId}`);
