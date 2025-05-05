@@ -68,11 +68,11 @@ src/
 
  Install Dependencies
 
-npm install
+## 👨‍💻 npm install
 
 . Start Development Server
 
-npm run dev
+## 📲 npm run dev
 
 
 
