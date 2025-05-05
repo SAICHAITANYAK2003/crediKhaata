@@ -1,6 +1,11 @@
-<p style="color: red;"><b>Note:</b> Due to use of MockAPI, when a new customer is added, the data is not fetched and shown in the list immediately. However, the customer is successfully added to the MockAPI. It shows up correctly after logout and login again.</p>
+## ❗‼️ ‼️ Important Note ‼️ ‼️ ‼️
+⚠️ **Due to the use of MockAPI, when a new customer is added, it may not appear in the customer list immediately.**  
+However, the customer **is successfully added** to the MockAPI.  
+To see the updated list, try logging out and logging in again to refresh the data.
 
-# CrediKhaata – Loan Ledger UI for Shopkeepers
+---
+
+# 🧾 CrediKhaata – Loan Ledger UI for Shopkeepers
 
 A responsive credit tracking app for small shopkeepers to manage trusted customers, track credit sales, record repayments, and view dues — all from a single dashboard.
 
@@ -21,7 +26,7 @@ A responsive credit tracking app for small shopkeepers to manage trusted custome
   - Outstanding balance
   - Next due date (calculated from loan data)
   - Status: _Up-to-date_ / _Overdue_
-- Overdue loans are highlighted in red
+- Overdue loans are highlighted clearly
 
 ### 3. **Customer Detail Page**
 - Shows all credit transactions for a selected customer:
@@ -38,7 +43,9 @@ A responsive credit tracking app for small shopkeepers to manage trusted custome
 - All forms include client-side validation
 
 ### 5. **Overdue Highlighting**
-- Loans with overdue status are visually marked on the dashboard for better tracking
+- Loans with overdue status are visually marked on the dashboard
+
+---
 
 ## 📁 Folder Structure
 
